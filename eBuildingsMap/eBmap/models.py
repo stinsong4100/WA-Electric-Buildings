@@ -1,0 +1,30 @@
+from django.db import models
+# Create your models here.
+
+
+class Building(models.Model):
+    year = models.IntegerField(default=2016)
+    Major = models.IntegerField(null=True)
+    Minor = models.IntegerField(null=True)
+    BldgNbr = models.IntegerField(null=True)
+    Address = models.CharField(max_length=200)
+    main_use = models.CharField(max_length=20)
+    Number_of_Stories = models.IntegerField(default=1)
+    Construction_Class = models.IntegerField(null=True)
+    Year_built = models.IntegerField(null=True)
+    Year_remodeled = models.IntegerField(null=True)
+    Building_Name = models.CharField(max_length=200)
+    Cook_type = models.CharField(max_length=200)
+    Space_heat_type = models.CharField(max_length=200)
+    DHW_type = models.CharField(max_length=200)
+    City = models.CharField(max_length=200)
+    County = models.CharField(max_length=200)
+    Leg_District = models.IntegerField()
+    Floor_Area = models.IntegerField(null=True)
+    Description = models.CharField(max_length=2000)
+    link = models.CharField(max_length=500)
+    Architect = models.CharField(max_length=200)
+    Engineer = models.CharField(max_length=200)
+    Builder = models.CharField(max_length=200)
+    lat = models.FloatField(default=47.6)
+    lon = models.FloatField(default=-122.3)
