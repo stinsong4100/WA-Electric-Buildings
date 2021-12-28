@@ -31,6 +31,7 @@ for index, bdg in kc_d.iterrows():
         Floor_Area = bdg['Floor Area (sq ft)'],
         Description = bdg['Description'],
         link = bdg['link'],
+        img_link = bdg['img_link'],
         Architect = bdg['Architect'],
         Engineer = bdg['Engineer'],
         Builder = bdg['Builder'],
