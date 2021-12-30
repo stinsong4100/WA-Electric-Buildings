@@ -3,12 +3,12 @@ import django, pandas as pd, pdb, numpy as np
 from eBmap.models import Building
 
 kc_d = pd.read_excel('../eBuildings.xlsx')
-
+kc_d.replace(np.nan,'',inplace=True)
 
 buildings = []
 for index, bdg in kc_d.iterrows():
     print(bdg['Building Name'],bdg['Floor Area (sq ft)'])
-    if (~np.isfinite(bdg['Floor Area (sq ft)'])):
+    if (bdg['Floor Area (sq ft)']==''):
         bdg['Floor Area (sq ft)']=None
     building = Building(
         year = int(2021),

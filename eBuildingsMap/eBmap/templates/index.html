@@ -76,9 +76,9 @@
           <td><a href='{{ b.link }}'><h1>{{ b.Building_Name }}</h1></a>
             {{ b.City }}, WA
 	    <p>{{ b.Description }}</p>
-	    Architect: {{ b.Architect }}<br>
-	    Engineer: {{ b.Engineer }}<br>
-	    Builder: {{ b.Builder }}<br>
+	    {% if b.Architect %}Architect: {{ b.Architect }}<br>{% endif %}
+	    {% if b.Engineer %}Engineer: {{ b.Engineer }}<br>{% endif %}
+	    {% if b.Builder %}Builder: {{ b.Builder }}<br>{% endif %}
 	  </td>
 	  </tr>
       {% endfor %}
