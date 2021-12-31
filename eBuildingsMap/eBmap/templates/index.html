@@ -72,8 +72,8 @@
       {% for b in object_list %}
         <tr>
 
-          <td><a href='{{ b.link }}'><img src="{{ b.img_link }}" height=100% width=100%></a></td>
-          <td><a href='{{ b.link }}'><h1>{{ b.Building_Name }}</h1></a>
+          <td><a href='{{ b.link }}' target="_blank"><img src="{{ b.img_link }}" height=100% width=100%></a></td>
+          <td><a href='{{ b.link }}' target="_blank"><h1>{{ b.Building_Name }}</h1></a>
             {{ b.City }}, WA
 	    <p>{{ b.Description }}</p>
 	    {% if b.Architect %}Architect: {{ b.Architect }}<br>{% endif %}
